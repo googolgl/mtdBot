@@ -1,0 +1,30 @@
+# Host binding "host:port"
+host: "127.0.0.1:8003"
+
+discord:
+  # Bot Token
+  token: "Zj.....z.D1.............KY................Q"
+  # Channel ID for bot messages
+  channel: "18......90.....7"
+  commands:
+  - ban
+  - unban
+  - kick
+  - grant
+  - revoke
+  - privs
+  - status
+  - msg
+  help: "```css\n
+        Support commands:\n
+        !status, !ban, !unban, !kick, !grant, !revoke, !privs, !status, !msg```"
+
+longPoll:
+  # category sub\pub
+  category: "minetest"
+  connect:
+    loggingEnabled: false
+    maxLongpollTimeoutSeconds: 26
+    maxEventBufferSize: 100
+    eventTimeToLiveSeconds: 20
+    deleteEventAfterFirstRetrieval: true
