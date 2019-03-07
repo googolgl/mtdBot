@@ -11,21 +11,14 @@ Copyright (C) 2019 Litvinoff Pavel <googolgl@gmail.com>
 Transmitting messages from the general chat Minetest in the Discord channel and back.
 Support command:
 
-***!status*** - Server’s Minetest version, time the server is running in seconds list of connected players and the message of the day.
-
-***!msg <playername> <message>*** - Send a private message <message> to <player>.
-
-***!ban <playername>*** - Ban IP of player.
-
-***!unban <playername/IP address>*** - Remove ban of player with the specified name or IP address.
-
-***!kick <playername> <reason>*** - Kicks the player with the name <player name>. Optionally a <reason> can be provided in text-form. This text is also shown to the kicked player.
-
-***!grant <playername> <priv1> <priv2> ...*** - Gives the <privilege> to <player>.
-
-***!revoke <playername> <priv1> <priv2> ...*** - Takes away a <privilege> from <player>.
-
-***!privs <playername>*** - Show privs of player.
+***!status*** - Server’s Minetest version, time the server is running in seconds list of connected players and the message of the day.<br>
+***!msg playername message*** - Send a private message message to playername.<br>
+***!ban playername*** - Ban IP of player.<br>
+***!unban playername/IP address*** - Remove ban of player with the specified name or IP address.<br>
+***!kick playername reason*** - Kicks the player with the name playername. Optionally a reason can be provided in text-form. This text is also shown to the kicked player.<br>
+***!grant playername priv1 priv2 ...*** - Gives the privilege to playername.<br>
+***!revoke playername priv1 priv2 ...*** - Takes away a privilege from playername.<br>
+***!privs playername*** - Show privs of player.
 
 # Installing
 Download the latest released version and build it:
