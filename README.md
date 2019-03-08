@@ -5,7 +5,7 @@ Version: 3.0.0
 DiscordBot for Minetest.
 
 # License of source code: AGPL v.3
-Copyright (C) 2019 Litvinoff Pavel <googolgl@gmail.com>
+Copyright (C) 2019 <googolgl@gmail.com>
 
 # Notice:
 Transmitting messages from the general chat Minetest in the Discord channel and back.
@@ -25,7 +25,7 @@ Download the latest released version and build it:
 ```
 git clone https://github.com/googolgl/mtdBot.git
 cd mtdBot
-go build -o mtdBot
+go build
 ```
 Install mod "lp_api" in the minetest.
 
