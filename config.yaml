@@ -3,9 +3,9 @@ host: "127.0.0.1:8003"
 
 discord:
   # Bot Token
-  token: "Zj.....z.D1.............KY................Q"
+  token: "Mjg0NDEwNzAzNjU2NTE3NjMz.D2gmhQ.JldxEP0zouJ6LjBS6pPopI3YCKA"
   # Channel ID for bot messages
-  channel: "18......90.....7"
+  #channel: "18......90.....7"
   commands:
   - ban
   - unban
@@ -21,7 +21,7 @@ discord:
 
 longPoll:
   # category sub\pub
-  category: "minetest"
+  #category: "minetest"
   connect:
     loggingEnabled: false
     maxLongpollTimeoutSeconds: 26

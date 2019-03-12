@@ -48,7 +48,7 @@ Open https://discordapp.com/developers/applications/me
 --- "Token:click to reveal", this is your TokenBot
 --- Push "Save changes"
 ```
-Edit config.ini
+Edit config.yaml
 
 Run on the server:
 ```

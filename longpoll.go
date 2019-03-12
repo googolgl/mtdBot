@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"io/ioutil"
 	"log"
 	"net/http"
 
@@ -27,22 +26,20 @@ func initLongPoll(c *yamlConf) *golongpoll.LongpollManager {
 
 // Messages from minetest chat
 func (b *mtdBot) fromMT(w http.ResponseWriter, r *http.Request) {
-	body, err := ioutil.ReadAll(r.Body)
-	if err != nil {
-		log.Println("[Error] reading the request body", err)
-		return
-	}
+	keys := r.URL.Query()
+	//log.Println(keys.Get("token"), keys.Get("category"))
 
+	dec := json.NewDecoder(r.Body)
 	msg := message{}
-	err = json.Unmarshal(body, &msg)
+	err := dec.Decode(&msg)
 	if err != nil {
 		log.Println("[Error] unmarshalling", err)
 		return
 	}
-	// sending message to the Discord
-	b.toDiscord(msg)
+	// sending message to the Discord channel
+	b.toDiscord(msg, keys.Get("category"))
 }
 
-func (b *mtdBot) toMT(m message) {
-	b.LongPoll.Publish(b.Config.LongPoll.Category, m)
+func (b *mtdBot) toMT(m message, chID string) {
+	b.LongPoll.Publish(chID, m)
 }

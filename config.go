@@ -10,14 +10,14 @@ import (
 type yamlConf struct {
 	Host    string `yaml:"host"`
 	Discord struct {
-		Token     string   `yaml:"token"`
-		ChannelID string   `yaml:"channel"`
-		Commands  []string `yaml:"commands"`
-		Help      string   `yaml:"help"`
+		Token string `yaml:"token"`
+		//ChannelID string   `yaml:"channel"`
+		Commands []string `yaml:"commands"`
+		Help     string   `yaml:"help"`
 	} `yaml:"discord"`
 	LongPoll struct {
-		Category string        `yaml:"category"`
-		Conn     *connLongPoll `yaml:"connect"`
+		//Category string        `yaml:"category"`
+		Conn *connLongPoll `yaml:"connect"`
 	} `yaml:"longPoll"`
 }
 
