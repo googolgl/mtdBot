@@ -3,7 +3,7 @@ host: "127.0.0.1:8003"
 
 discord:
   # Bot Token
-  token: "Mjg0NDEwNzAzNjU2NTE3NjMz.D2gmhQ.JldxEP0zouJ6LjBS6pPopI3YCKA"
+  token: "Mjg0......opI3YCKA"
   # Channel ID for bot messages
   #channel: "18......90.....7"
   commands:
