@@ -30,11 +30,12 @@ go build
 Install mod "lp_api" in the minetest.
 
 ```
-1. Copy ~/mtdBot/minetest/mods/lp_api > ~/minetest/mods/lp_api
-2. Add this mods to trusted_mods.
+1. > git clone https://github.com/googolgl/lp_api
+2. Copy ~/lp_api > ~/minetest/mods/lp_api
+3. Add this mods to trusted_mods.
 --- Open : /minetest/minetest.confg
 --- Add : secure.http_mods = lp_api
-3. Activate lp_api mod in menu
+4. Activate lp_api mod in menu
 ```
 
 # Usage
