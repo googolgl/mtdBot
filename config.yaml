@@ -3,7 +3,7 @@ host: "127.0.0.1:8003"
 
 discord:
   # Bot Token
-  token: 'N1v0'
+  token: 'NTU...0'
   # Channel ID for bot messages
   commands:
   - ban
@@ -25,3 +25,8 @@ longPoll:
     maxEventBufferSize: 100
     eventTimeToLiveSeconds: 20
     deleteEventAfterFirstRetrieval: true
+
+# Log level
+#############
+# Available log level: (panic, fatal, error, warning, info, debug)
+loglevel: debug

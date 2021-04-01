@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -10,6 +9,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/jcuga/golongpoll"
+	"github.com/sirupsen/logrus"
 )
 
 type message struct {
@@ -28,6 +28,7 @@ type mtdBot struct {
 }
 
 var (
+	log        = logrus.New()
 	configFile = flag.String("config", "config.yaml", "Config file")
 )
 
@@ -47,7 +48,7 @@ func main() {
 	http.HandleFunc("/pub", BOT.fromMT)
 
 	log.Println("Http server started.. [OK]")
-	log.Fatal("[Error] ", http.ListenAndServe(Config.Host, nil))
+	log.Fatal(http.ListenAndServe(Config.Host, nil))
 }
 
 func (b *mtdBot) shutdown(c chan os.Signal) {

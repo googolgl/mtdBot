@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"strings"
 
 	"github.com/bwmarrin/discordgo"
@@ -11,13 +10,13 @@ func initDiscord(c *yamlConf) *discordgo.Session {
 	// Create a new Discord session using the provided bot token.
 	dg, err := discordgo.New("Bot " + c.Discord.Token)
 	if err != nil {
-		log.Fatal("[Error] creating Discord session", err)
+		log.Fatalf("creating Discord session: %v", err)
 	}
 
 	// Open the websocket and begin listening.
 	err = dg.Open()
 	if err != nil {
-		log.Fatal("[Error] opening Discord session: ", err)
+		log.Fatalf("opening Discord session: %v", err)
 	}
 
 	log.Println("Connection discord... [OK]")
@@ -27,7 +26,6 @@ func initDiscord(c *yamlConf) *discordgo.Session {
 // Messages from discord chat
 func (b *mtdBot) fromDiscord(s *discordgo.Session, m *discordgo.MessageCreate) {
 	// Ignore all messages created by the bot itself
-	//log.Println(m.State)
 	if m.Author.ID == s.State.User.ID {
 		return
 	}
@@ -38,7 +36,6 @@ func (b *mtdBot) fromDiscord(s *discordgo.Session, m *discordgo.MessageCreate) {
 		PlayerName:  m.Author.Username,
 	}
 	// Getting message from needed channel only
-	//if m.ChannelID == b.Config.Discord.ChannelID {
 	if strings.HasPrefix(m.Content, "!help") {
 		s.ChannelMessageSend(m.ChannelID, b.Config.Discord.Help)
 		return
@@ -51,7 +48,6 @@ func (b *mtdBot) fromDiscord(s *discordgo.Session, m *discordgo.MessageCreate) {
 			msg.MessageText = ""
 		}
 	}
-	//}
 	// sending message to the Minetest
 	b.toMT(msg, m.ChannelID)
 }
